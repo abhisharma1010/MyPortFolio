@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  margin: 0;
+  font-family:'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #191B1E;
+}
+.active{
+  color:#FF014F;
+}
+html,body{
+  scroll-behavior: smooth;
+
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.skill-per1,.skill-per2,.skill-per3,.skill-per4,.skill-per5,.skill-per6,.skill-per7,.skill-per8,.skill-per9,.skill-per10,.skill-per11,.skill-per12,.skill-per13,.skill-per14,.skill-per15{
+  background: linear-gradient(145deg, #f02981 0%, #c81901 100%);
+  animation: fill-bars 2.5s 1;
+
+}
+@keyframes fill-bars{
+  from{
+      width:0;
+  }
+  to{
+      width:100%;
+  }
+}
+.projectcard{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.projectcard:hover{
+  box-shadow: #C4CFDE 0px 5px 15px;
+}
+
+.projectcard:hover .p-img{
+  transform: scale(1.1);
+}
+.educard{
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.educard:hover{
+  box-shadow: #C4CFDE 0px 5px 15px;
+}
+
+
+
+
+
+@media screen and (max-width:768px) {
+  .project-section{
+    margin-top:30%;
+  } 
+  
+}
+@media screen and (max-width:570px) {
+  .social-icons{
+    flex-direction: column;
+  }
+}
+.img-container{
+  box-sizing: border-box;
+}
+@media screen and (max-width:480px){
+  .img-container{
+    /* w-[480px] h-[590px] */
+    height:480px ;
+    width:520px;
+  }
+}
+@media screen and (max-width:425px){
+  .edutitle{
+    font-size: 16px;
+  }
+  .edudetail{
+    font-size: 12px;
+  }
+.edudescription{
+  font-size: 14px;
+}
+.p-title{
+  font-size: 14px;
+}
+}
