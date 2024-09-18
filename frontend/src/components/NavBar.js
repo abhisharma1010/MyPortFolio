@@ -1,5 +1,6 @@
 import React, { useState, useEffect,useRef } from "react";
 import { LuMenu } from "react-icons/lu";
+import { HiOutlineXMark } from "react-icons/hi2";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -9,7 +10,7 @@ function NavBar(){
   
   // State to control navbar background change on scroll
   const [isScrolled, setIsScrolled] = useState(false);
-
+  
    // Effect to detect scroll position and update state
    useEffect(() => {
     const handleScroll = () => {
@@ -51,7 +52,11 @@ function NavBar(){
   }, []);
 
   const [isMenuOpen,setIsMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
     return(
         <div className="">
@@ -62,7 +67,7 @@ function NavBar(){
                   <img src="./images/skg.jpg" alt="Soham Kumar" className="w-[65px] h-[60px] rounded-full "/>
                 </div>
                 <div className="w-[70%]">
-                    <ul className="lg:flex text-white gap-[4rem] text-[1.1rem] justify-end pr-[60px] hidden ">
+                    <ul className="md:flex lg:flex text-white gap-[4rem] text-[1.1rem] justify-end pr-[60px] hidden ">
                         <a href="#home">
                             <li className="hover:text-[#FF014F] ">Home</li>
                         </a>
@@ -80,7 +85,17 @@ function NavBar(){
                         </a>
                     </ul>
                 </div>
-                <LuMenu className="text-[#FF014F] mr-[30px] lg:hidden scale-150 font-medium text-3xl" onClick={()=>setIsMenuOpen(!isMenuOpen)} />
+                
+              
+
+                 {/* Hamburger Menu Icon / Close Icon */}
+                <button onClick={toggleMenu} className="text-white focus:outline-none md:hidden">
+                  {menuOpen ? (
+                    <HiOutlineXMark className=" text-[#FF014F] mr-[30px] md:hidden lg:hidden scale-150 font-medium text-3xl" onClick={()=>setIsMenuOpen(!isMenuOpen)}/>
+                  ) : (  <LuMenu className=" text-[#FF014F] mr-[30px] md:hidden lg:hidden scale-150 font-medium text-3xl" onClick={()=>setIsMenuOpen(!isMenuOpen)} />
+                    
+                  )}
+                </button>
                   <ul className={`absolute  z-1000 lg:hidden top-20 left-0 pt-6 pb-6 w-full bg-[#1a1a1a] flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${isMenuOpen ? "opacity-100":"opacity-0"}`} style={{transition:"transform 0.3s ease, opacity 0.3s ease"}} >
                       
                         <a href="#home">

@@ -17,9 +17,9 @@ require("./config/database").connect();
 const user = require("./routes/contact");
 app.use("/form",user);
 // activate server
-app.listen(8000,()=>{
+app.listen(4000,()=>{
     try{
-        console.log('Server is running on port 8000');
+        console.log(`Server is running on port 4000`);
     }catch(err){
         console.log("Yhi dikkat hai");   
     }
