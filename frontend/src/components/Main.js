@@ -31,6 +31,12 @@ function Main(){
     });
   }, []);
        
+  const downloadResume = () => {
+    const link = document.createElement('a');
+    link.href = 'https://drive.google.com/file/d/13MrzICgrec6pN4YR7_sI-OEdAxDQ9_sK/view?usp=drive_link' // path to your resume file
+    link.download = 'My_Resume.pdf'; // name for the downloaded file
+    link.click();
+  };
 
     return(
         <div className="w-full" id="home">
@@ -48,8 +54,8 @@ function Main(){
                 C++, with a strong foundation in algorithm design. Eager to contribute to a dynamic team and apply problem-solving skills.
                 Ability to work with C++, Java and Web Development.</p>
                 {/* Resume section  */}
-                <button className="bg-none outline-none bg-[#262626] relative w-fit py-[8px] px-[28px] rounded-full hover:shadow-lg hover:shadow-[#7C838E]">
-                    <a className="hover:text-[#C4CFDE] text-[#FF014F] font-[500]" download="Soham-Kumar-Resume.png" href="/Resume.pdf">Resume</a>
+                <button  onClick={downloadResume} className="bg-none outline-none bg-[#262626] relative w-fit py-[8px] px-[28px] rounded-full hover:shadow-lg hover:shadow-[#7C838E]">
+                    <a className="hover:text-[#C4CFDE] text-[#FF014F] font-[500]">Resume</a>
                 </button>
                 
                 <div className=" social-icons mt-[3%] flex gap-10 pb-10">

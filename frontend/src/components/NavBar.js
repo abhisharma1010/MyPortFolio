@@ -67,7 +67,7 @@ function NavBar(){
                   <img src="./images/skg.jpg" alt="Soham Kumar" className="w-[65px] h-[60px] rounded-full "/>
                 </div>
                 <div className="w-[70%]">
-                    <ul className="md:flex lg:flex text-white gap-[4rem] text-[1.1rem] justify-end pr-[60px] hidden ">
+                    <ul className=" lg:flex text-white gap-[4rem] text-[1.1rem] justify-end pr-[60px] hidden ">
                         <a href="#home">
                             <li className="hover:text-[#FF014F] ">Home</li>
                         </a>
@@ -89,10 +89,10 @@ function NavBar(){
               
 
                  {/* Hamburger Menu Icon / Close Icon */}
-                <button onClick={toggleMenu} className="text-white focus:outline-none md:hidden">
+                <button onClick={toggleMenu} className="text-white focus:outline-none ">
                   {menuOpen ? (
-                    <HiOutlineXMark className=" text-[#FF014F] mr-[30px] md:hidden lg:hidden scale-150 font-medium text-3xl" onClick={()=>setIsMenuOpen(!isMenuOpen)}/>
-                  ) : (  <LuMenu className=" text-[#FF014F] mr-[30px] md:hidden lg:hidden scale-150 font-medium text-3xl" onClick={()=>setIsMenuOpen(!isMenuOpen)} />
+                    <HiOutlineXMark className=" text-[#FF014F] mr-[30px]  lg:hidden scale-150 font-medium text-3xl" onClick={()=>setIsMenuOpen(!isMenuOpen)}/>
+                  ) : (  <LuMenu className=" text-[#FF014F] mr-[30px] lg:hidden scale-150 font-medium text-3xl" onClick={()=>setIsMenuOpen(!isMenuOpen)} />
                     
                   )}
                 </button>
