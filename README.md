@@ -4,12 +4,14 @@ Features :-
 2. Project Showcase: Displays my projects with descriptions and links to live demos or repositories.
 3. Skills Section: Highlights my technical skills and proficiencies.
 4. Contact Form: Users can fill out a form to send messages directly to my email.
+
 Technologies Used
 1) Frontend:
 
 i) React.js
 ii) Tailwind CSS
 iii) Axios
+
 2) Backend:
 
 i) Node.js
