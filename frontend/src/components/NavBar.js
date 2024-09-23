@@ -96,7 +96,7 @@ function NavBar(){
                     
                   )}
                 </button>
-                  <ul className={`absolute  z-1000 lg:hidden top-20 left-0 pt-6 pb-6 w-full bg-[#1a1a1a] flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${isMenuOpen ? "opacity-100":"opacity-0"}`} style={{transition:"transform 0.3s ease, opacity 0.3s ease"}} >
+                  <ul className={`absolute z-1000 lg:hidden top-20 left-0 pt-6 pb-6 w-full bg-[#1a1a1a] flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${isMenuOpen ? "opacity-100":"opacity-0"}`} style={{transition:"transform 0.3s ease, opacity 0.3s ease"}} >
                       
                         <a href="#home">
                             <li className="hover:text-[#FF014F] text-[#C4CFDE]">Home</li>
