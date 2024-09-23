@@ -1,7 +1,7 @@
 // import mongoose
 const mongoose = require("mongoose");
 const nodemailer = require("nodemailer");
-
+require('dotenv').config();
 // Define the Contact schema
 const contactSchema = new mongoose.Schema({
     yourName: {
@@ -35,10 +35,10 @@ contactSchema.post("save",async function(doc){
         console.log("doc",doc);
         //transporter
         let transporter = nodemailer.createTransport({
-            host:`smtp.gmail.com`,
+            host:process.env.MAIL_HOST,
             auth:{
-                user:`sohamkumar9667@gmail.com`,
-                pass:`sjne fkuv jjhc brol`,
+                user:process.env.MAIL_USER,
+                pass:process.env.MAIL_PASS,
             },
         })
         // send mail

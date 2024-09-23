@@ -4,7 +4,10 @@ const app = express();
 const cors = require('cors');
 // import port number from .env file
 // require('dotenv').config();
-// const PORT = process.env.PORT || 3000;
+require("dotenv").config();
+
+const PORT = process.env.PORT || 3000;
+
 
 // middleware to parse json request body
 app.use(cors());
@@ -19,9 +22,9 @@ require("./config/database").connect();
 const user = require("./routes/contact");
 app.use("/form",user);
 // activate server
-app.listen(4000,()=>{
+app.listen(PORT,()=>{
     try{
-        console.log(`Server is running on port 4000`);
+        console.log(`Server is running on port ${PORT}`);
     }catch(err){
         console.log("Server issue");   
     }
