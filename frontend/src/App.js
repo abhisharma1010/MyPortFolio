@@ -1,5 +1,7 @@
+import React,{useState,useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Loader from './components/Loader';
 import NavBar from './components/NavBar';
 import Main from './components/Main';
 import Education from './components/Education';
@@ -9,9 +11,19 @@ import Contact from './components/Contact';
 import {Toaster} from 'react-hot-toast';
 
 function App() {
-
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    // Simulate a network request
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Simulate a 2-second load time
+  }, []);
   return (
     <div>
+    {loading ? (
+      <Loader/>):
+    (
+     <div>
       <div>
       <NavBar/>
       </div>
@@ -36,10 +48,11 @@ function App() {
       </div>
       <Toaster/>
 
-     
+     </div>
     
+    
+    )}
     </div>
-   
   );
 }
 
