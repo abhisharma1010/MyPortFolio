@@ -60,8 +60,8 @@ function NavBar(){
 
     return(
         <div className="">
-            <nav ref={boxRef2} className={`flex justify-between  items-center pt-[10px] pb-[10px] ${
-        isScrolled ? 'bg-[#262626] fixed w-full z-20' : 'bg-[#191B1E]'
+            <nav ref={boxRef2} className={` flex justify-between  items-center pt-[10px] pb-[10px] ${
+        isScrolled ? 'bg-[#262626] fixed w-full z-20' : 'bg-[#191B1E] w-full'
       }`} >
                 <div className="w-[40%] lg:w-[20%] pl-[30px]">
                   <img src="./images/skg.jpg" alt="Soham Kumar" className="w-[65px] h-[60px] rounded-full "/>
@@ -96,7 +96,7 @@ function NavBar(){
                     
                   )}
                 </button>
-                  <ul className={`absolute z-1000 lg:hidden top-20 left-0 pt-6 pb-6 w-full bg-[#1a1a1a] flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${isMenuOpen ? "opacity-100":"opacity-0"}`} style={{transition:"transform 0.3s ease, opacity 0.3s ease"}} >
+                  <ul className={`fixed z-1000 lg:hidden top-20 left-0 pt-6 pb-6 w-full bg-[#1a1a1a] flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${isMenuOpen ? "opacity-100":"opacity-0"}`} style={{transition:"transform 0.3s ease, opacity 0.3s ease"}} >
                       
                         <a href="#home">
                             <li className="hover:text-[#FF014F] text-[#C4CFDE]">Home</li>

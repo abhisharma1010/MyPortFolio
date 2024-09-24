@@ -40,7 +40,7 @@ function Main(){
 
     return(
         <div className="w-full" id="home">
-        <div className=" flex flex-col-reverse lg:flex-row text-white  w-10/12 mx-auto justify-between">
+        <div className="z-0 flex flex-col-reverse lg:flex-row text-white  w-10/12 mx-auto justify-between">
             {/* left side content  */}
             <div  ref={boxRef2} className="  gap-[2rem] flex flex-col justify-center  pt-[70px]  ">
                 {/* Welcome section  */}

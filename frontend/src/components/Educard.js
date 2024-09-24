@@ -1,37 +1,11 @@
 import React, { useEffect, useRef }  from "react";  
 import edudata from "../edudata";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-// Register ScrollTrigger
-gsap.registerPlugin(ScrollTrigger);
-
 
 function Educard(props){
     let edudetail=props.edudetail;
-    const boxRef = useRef(null); // Create a ref for the element
-
-    useEffect(() => {
-        gsap.fromTo(
-          boxRef.current,
-          { opacity: 0, y: 100 }, // Start state: fully transparent and moved down 100px
-          {
-            opacity: 1, // End state: fully visible
-            y: 0, // End state: moved to original position
-            duration: 0.9,
-            scrollTrigger: {
-              trigger: boxRef.current, // What element should trigger the animation
-              start: "top 80%", // When to start (when the top of the element hits 80% from the top of the viewport)
-              once:true,
-              end: "top 30%", // When to end (when the top of the element hits 30% from the top of the viewport)
-              scrub: false, // Sync animation with scrolling
-            },
-          }
-        );
-      }, []);
-    
     return (
       
-        <div ref={boxRef} className="educard bg-[#1a1a1a] rounded-[.8rem] w-[520px] py-[20px] px-[25px] flex flex-col gap-[20px]  border border-[#1a1a1a] ">
+        <div className="educard bg-[#1a1a1a] rounded-[.8rem] w-[520px] py-[20px] px-[25px] flex flex-col gap-[20px]  border border-[#1a1a1a] ">
             {/* for title , college name and marks */}
             <div className=" flex justify-between">
                 {/* //for title and college name */}

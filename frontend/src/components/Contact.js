@@ -50,13 +50,13 @@ function Contact(){
       <div className=" text-white  w-10/12 mx-auto ">
         <div className="flex flex-col justify-center items-center gap-[10px]">
           <p className="text-[#FF014F] font-[500]">CONTACT</p>
-          <h2 className="text-[1.8rem] md:text-[2.5rem] lg:text-[3rem] text-[#C4CFDE] font-[600] text-center">Contact With Me</h2>
+          <h2 className="text-[1.8rem] md:text-[2.5rem] lg:text-[3rem] text-[#C4CFDE] font-[600] text-center">Contact With Me..</h2>
         </div>
             
             {/* Top level container  */}
             <div className="flex flex-col lg:flex-row  pb-[30px] mt-[5%] gap-[50px]">
                 {/* left side contact details  */}
-                <div ref={boxRef} className=" flex flex-col lg:w-[35vw] py-[30px] px-[30px] bg-[#131313] rounded-xl  ">
+                <div ref={boxRef}  className=" flex flex-col lg:w-[35vw] py-[30px] px-[30px] bg-[#131313] rounded-xl  ">
                     <div className=" rounded-lg overflow-hidden ">
                         <img src="images/contact1.png" className="w-[100%] h-[100%] transition-transform duration-[.7s] hover:scale-[1.2]" />
                     </div>

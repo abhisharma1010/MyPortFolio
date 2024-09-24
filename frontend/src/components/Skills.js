@@ -28,26 +28,7 @@ function Skills(){
     );
   }, []);
 
-  // Reference to the element that we want to animate
-  const boxRef2 = useRef(null);
-  useEffect(() => {
-    const elementId = boxRef2.current;
-
-    gsap.fromTo(
-      elementId,
-      { opacity: 0, x: 200 },  // Start state: hidden and moved right
-      {
-        opacity: 1, 
-        x: 0,         // End state: visible and at its original position
-        duration: 1.5,
-        scrollTrigger: {
-          trigger: elementId,      // Element to watch for triggering the animation
-          start: 'top 80%',      // When the top of the element hits 80% from the top of the viewport
-          once: true,            // Ensure the animation runs only once
-        },
-      }
-    );
-  }, []);
+  
   
        
 
@@ -60,9 +41,9 @@ function Skills(){
              <h2 className="text-[1.8rem] md:text-[2.5rem] lg:text-[3rem] text-[#C4CFDE] font-[620] text-center">My Skills..</h2>
         </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[5%] mt-[5%]  ">
+            <div ref={boxRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[5%] mt-[5%]  ">
                 {/* Programming Languages Skills  */}
-                <div ref={boxRef2} className="flex flex-col w-[100%] gap-[20px]">
+                <div  className="flex flex-col w-[100%] gap-[20px]">
                     <h2 className="text-[1.5rem] text-[#FF014F] font-medium">Programming Languages</h2>
                     {/* skills-bar content  */}
                     <div className="flex flex-col gap-[20px]">
@@ -158,7 +139,7 @@ function Skills(){
                 </div>
                 </div>
                 {/* Backend Skills  */}
-                <div ref={boxRef}className=" flex flex-col w-[100%] gap-[20px]">
+                <div className=" flex flex-col w-[100%] gap-[20px]">
                 <h2 className="text-[1.5rem] text-[#FF014F] font-medium">Back-End Technologies</h2>
                     {/* skills-bar content  */}
                     <div className="flex flex-col gap-[20px]">
