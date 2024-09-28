@@ -10,7 +10,7 @@ const projectdata=[
         id:2,
         image:"./images/millenium.png",
         title:"This is about the Millenium Restaurant Management project which is developed using HTML and CSS only.",
-        url:"https://millenium-restaurant-project-sk.netlify.app/"
+        url:"https://restaurant-s-management.vercel.app/"
     },  
     
     
