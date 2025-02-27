@@ -1,8 +1,13 @@
 Name : SOHAM KUMAR
+
 Company : CODTECH IT SOLUTIONS
+
 ID : CT12WDS59
+
 Domain : Full Stack Web Development
+
 Duration : 25/12/24 to 25/03/25
+
 Mentor : Md. Muzammil Ahmed
 
 Overview Of The Project 
